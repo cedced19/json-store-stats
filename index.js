@@ -11,7 +11,7 @@ Store.prototype.getAll = function () {
 }
 
 Store.prototype.get = function (id) {
-    if (this.exists(id)) {
+    if (this.Store.hasOwnProperty(id)) {
         return this.Store[id];
     } else {
         return 0;
@@ -19,7 +19,7 @@ Store.prototype.get = function (id) {
 }
 
 Store.prototype.add = function (id, cb) {
-    if (this.exists(id)) {
+    if (this.Store.hasOwnProperty(id)) {
         this.Store[id]++;
     } else {
         this.Store[id] = 1;
@@ -34,16 +34,6 @@ Store.prototype.purge = function (cb) {
 
 Store.prototype.save = function (cb) {
     fs.writeFile(this.path, JSON.stringify(this.Store), cb);
-}
-
-Store.prototype.exists = function (id) {
-    var exists = false;
-    for (var i in this.Store) {
-        if (i == id) {
-            exists = true;
-        }
-    }
-    return exists;
 }
 
 module.exports = function (path) {
