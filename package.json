@@ -1,0 +1,30 @@
+{
+  "name": "json-store-stats",
+  "version": "0.0.0",
+  "description": "Simple JSON database to count things with id.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cedced19/json-store-stats.git"
+  },
+  "keywords": [
+    "db",
+    "json",
+    "add",
+    "stats",
+    "count"
+  ],
+  "author": "Cédric JUNG <cedced19@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cedced19/json-store-stats/issues"
+  },
+  "homepage": "https://github.com/cedced19/json-store-stats#readme",
+  "devDependencies": {
+    "mocha": "^5.2.0",
+    "randomstring": "^1.1.5"
+  }
+}
